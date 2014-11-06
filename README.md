@@ -53,9 +53,11 @@ or
 	In [1]: import taylor_diag
 	
 1) open netcdf data (file = archive.nc and var = variable from archive.nc):
+
 	In [2]: data = taylor_diag.load_nc(file,'var')
 
 2) create a dict of series:
+
 	In [3]: series ={}
 	In [4]: series[0] = data1 
 	In [5]: series[1] = data2
@@ -64,6 +66,7 @@ note::
 	series[0] is the reference data by default
 
 3) create a Taylor diagram
+
 	In [6]:taylor_diag.Taylor_diag(series)
 
 
@@ -71,6 +74,7 @@ Support Group
 =============
 
 Any doubt ... talk to me :
+
 	https://groups.google.com/forum/?hl=en#!forum/taylor-diag-users-support
 
 
