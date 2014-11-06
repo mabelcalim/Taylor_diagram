@@ -4,7 +4,7 @@ import mpl_toolkits.axisartist.grid_finder as GF
 import mpl_toolkits.axisartist.floating_axes as FA
 import matplotlib.pyplot as plt
 
-def TaylorSpectral(series):
+def Taylor_diag(series):
     """ Taylor Diagram : obs is reference data sample
         in a full diagram (0 --> npi)
         --------------------------------------------------------------------------
