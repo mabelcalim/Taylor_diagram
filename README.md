@@ -3,7 +3,8 @@ Taylor_diagram
 
 Taylor diagram in python based on Taylor (2001).
 
-![ScreenShot](https://github.com/mabelcalim/Taylor_diagram/example.png) 
+
+![ScreenShot](https://github.com/mabelcalim/Taylor_diagram/blob/master/example.png)
 
 Installation
 ============
