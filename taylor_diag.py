@@ -1,8 +1,24 @@
+#!/usr/bin/python
+# _*_ coding: latin-1 -*-
+
 import numpy as np
 from numpy import ma
 import mpl_toolkits.axisartist.grid_finder as GF
 import mpl_toolkits.axisartist.floating_axes as FA
 import matplotlib.pyplot as plt
+import netCDF4
+
+def load_nc(file,var):
+	"""
+  	Open ARCHIVE .nc
+	file  = archive.nc
+	var   = variable from archive.nc
+	"""
+	f = netCDF4.Dataset(file,'r+')
+	dara = f.variables[var][:]
+	f.close()
+	return data
+
 
 def Taylor_diag(series):
     """ Taylor Diagram : obs is reference data sample

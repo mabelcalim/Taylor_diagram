@@ -7,8 +7,8 @@ Created on Thu Nov 6 2014
 
 from __future__ import absolute_import
 
-from .taylor_diag     import load_nc
-from .taylor_diag     import Taylor_diag
+from .lib.taylor_diag     import load_nc
+from .lib.taylor_diag     import Taylor_diag
 
 
 

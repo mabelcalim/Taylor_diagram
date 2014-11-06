@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# _*_ coding: latin-1 -*-
+
 import numpy as np
 from numpy import ma
 import mpl_toolkits.axisartist.grid_finder as GF
