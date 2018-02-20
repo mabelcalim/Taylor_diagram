@@ -4,7 +4,7 @@ Taylor_diagram
 Taylor diagram in python based on Taylor (2001).
 
 
-![ScreenShot](https://github.com/mabelcalim/Taylor_diagram/blob/master/example.png)
+![ScreenShot](https://github.com/mabelcalim/Taylor_diagram/blob/master/example2.png)
 
 Installation
 ============
@@ -44,31 +44,7 @@ The first three lines should also be included in the **$HOME/.bashrc** file.
 Cookbook
 =========
 
-0) open a terminal:
-	
-	python 
-or
-	iptyhon
-
-	In [1]: import taylor_diag
-	
-1) open netcdf data (file = archive.nc and var = variable from archive.nc):
-
-	In [2]: data = taylor_diag.load_nc(file,'var')
-
-2) create a dict of series:
-
-	In [3]: series ={}
-	In [4]: series[0] = data1 
-	In [5]: series[1] = data2
-	
-note::
-	series[0] is the reference data by default
-
-3) create a Taylor diagram
-
-	In [6]:taylor_diag.Taylor_diag(series)
-
+	example prêt-à-porter.ipynb	
 
 Support Group
 =============
@@ -76,5 +52,5 @@ Support Group
 Any doubt ... talk to me :
 
 	https://groups.google.com/forum/?hl=en#!forum/taylor-diag-users-support
-
+        mabel.calim@gmail.com
 
