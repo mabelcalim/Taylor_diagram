@@ -11,6 +11,7 @@ import mpl_toolkits.axisartist.grid_finder as GF
 import mpl_toolkits.axisartist.floating_axes as FA
 import matplotlib.pyplot as plt
 import netCDF4
+from matplotlib.projections import PolarAxes
 
 def load_nc(file,var):
 	"""

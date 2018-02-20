@@ -16,4 +16,4 @@ from .lib.taylor_diag     import Taylor_diag
 __all__ = ['load_nc', 'Taylor_diag']
 
 # Package version number.
-__version__ = '0.0.1.1'
+__version__ = '0.0.1.2'
