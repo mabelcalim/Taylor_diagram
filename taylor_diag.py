@@ -20,7 +20,7 @@ def load_nc(file,var):
 	return data
 
 
-def Taylor_diag(series):
+def Taylor_diag(series,names):
     """ Taylor Diagram : obs is reference data sample
         in a full diagram (0 --> npi)
         --------------------------------------------------------------------------
@@ -35,8 +35,8 @@ def Taylor_diag(series):
     ref = 1# ma.std(series[0])
     #print corr
     
-    rlocs = np.concatenate((np.arange(0,-10,-0.2),[-0.95,-0.99],np.arange(0,10,0.2),[0.95,0.99]))
-    str_rlocs = np.concatenate((np.arange(0,10,0.2),[0.95,0.99],np.arange(0,10,0.2),[0.95,0.99]))
+    rlocs = np.concatenate((np.arange(0,-10,-0.25),[-0.95,-0.99],np.arange(0,10,0.25),[0.95,0.99]))
+    str_rlocs = np.concatenate((np.arange(0,10,0.25),[0.95,0.99],np.arange(0,10,0.25),[0.95,0.99]))
     tlocs = np.arccos(rlocs)        # Conversion to polar angles
     gl1 = GF.FixedLocator(tlocs)    # Positions
     tf1 = GF.DictFormatter(dict(zip(tlocs, map(str,rlocs))))
@@ -99,7 +99,7 @@ def Taylor_diag(series):
 
     
     rms = np.sqrt(ref**2 + rs**2 - 2*ref*rs*np.cos(ts))
-    CS =ax.contour(ts, rs,rms)
+    CS =ax.contour(ts, rs,rms,cmap=cm.bone)
     plt.clabel(CS, inline=1, fontsize=10)
     
 
@@ -112,8 +112,8 @@ def Taylor_diag(series):
     colors = plt.matplotlib.cm.jet(np.linspace(0,1,len(corr)))
     
     for i in aux:
-        ax.plot(np.arccos(corr[i]), std[i],c=colors[i],marker='s',label="exp %s" %i)
+        ax.plot(np.arccos(corr[i]), std[i],c=colors[i],alpha=0.7,ms=15,marker='o',label="%s" %names[i])
         ax.text(np.arccos(corr[i]), std[i],"%s"%i)
     legend(bbox_to_anchor=(1.5, 1),prop=dict(size='large'),loc='best')
-    
+    plt.savefig('example.png', dpi=300)
     return
