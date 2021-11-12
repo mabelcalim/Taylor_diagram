@@ -20,7 +20,7 @@ def load_nc(file,var):
 	var   = variable from archive.nc
 	"""
 	f = netCDF4.Dataset(file,'r+')
-	dara = f.variables[var][:]
+	data = f.variables[var][:]
 	f.close()
 	return data
 
